@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Sans", sans-serif;
+}
+
+#index {
+
+    background-image: url('../images/background-main.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+
+
+}
+#background-trailers {
+    background-image: url('../images/background-trailers.png');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+}
+#background-trailers::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.884); 
+    z-index: -1;
+}
+
+#index::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.884); 
+    z-index: -1;
+}
+
+:root {
+    --cor-01: rgba(169, 0, 221, 0.548);
+    --cor-02: #000;
+    --cor-03: #ccc;
+    --cor-04: #fff
+}
+#cabecalho {
+    background-color: rgba(0, 0, 0, 0);
+}
+#cabecalho .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho #logo {
+    width: 70px;
+}
+#menu .submenu {
+    background-color: var(--cor-02);
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+}
+#menu ul li a{
+    text-decoration: none;
+    color: var(--cor-04);
+    display: block;
+    padding: 20px 30px;
+    transition: all 0.3s linear;
+
+
+}
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+#menu ul li a:hover {
+    background-color: rgba(255, 97, 97, 0.63);
+
+}
+#menu ul li:hover .submenu {
+    display: block;
+}
+.cara img {
+    width: 700px;
+    margin-left: 30%;
+    animation: flutuar 3s ease-in-out infinite;    
+}
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.banguela img {
+    width: 350px;
+    position: absolute;
+    top: 86%;
+    left: 75%; 
+    z-index: 1;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+.titulo {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(255, 101, 101, 0.897);
+
+}
+
+#historia img {
+    float: left;
+    width: 350px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.botao-menu {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(255, 103, 103);
+    margin-left: 1000px;
+}
+.botao-menu:hover {
+    background-color: rgba(255, 103, 103, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    
+}
+
+.descubra p {
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    margin-left: 450px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.DESCUBRA {
+    color: rgb(252, 119, 119);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#blocos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 1200px;
+    margin-left: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.bloco1{
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-personagens.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+
+}
+.bloco2 {
+    position: relative;
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-dragoes.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+}
+.bloco3 {
+    position: relative;
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-live.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+}
+.bloco3::after {
+    content: "Live Action";
+    position: absolute;
+    top: 50%; left: 18%;
+    border-radius: 20px; 
+    pointer-events: none;
+    font-weight: bold;
+    color: rgb(253, 117, 117);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+    
+}
+.bloco3:hover::after {
+    opacity: 1;
+}
+.bloco1::before{
+    content: "Personagens";
+    position: absolute;
+    top: 50%; left: 18%; 
+    border-radius: 20px; 
+    pointer-events: none;
+    color: rgb(255, 128, 128);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+}
+.bloco2::before {
+    content: "Dragões";
+    position: absolute;
+    top: 50%; left: 25%;
+    border-radius: 20px; 
+    pointer-events: none;
+    color: rgb(255, 128, 128);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+}
+.bloco2:hover::before {
+    opacity: 1;
+}
+.bloco1:hover::before {
+    opacity: 1;
+}
+.bloco2::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px; 
+    pointer-events: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+.bloco1:hover,
+.bloco2:hover,
+.bloco3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+}
+.resumo:hover {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+}
+
+
+#historia p {
+    margin-bottom: 15px;
+    text-align: justify;
+
+}
+#rodape {
+    background-color: #000;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px 0;
+    font-size: 13px;
+}
+a { 
+    color: antiquewhite;
+}
+a:hover
+{
+    color:var(--cor-01);
+}
+
+#fotos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+                
+}
+#fotos #galeria img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+    
+
+}
+#fotos #galeria img:hover {
+    transform: scale(1.1);
+
+}
+#videos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.enciclopedia {
+    background-color: rgba(0, 0, 0, 0.329);
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+    z-index: 1;
+}
+
+.enciclopedia p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.destaque-dragoes {
+    color:#ff5050;
+    font-weight: bold;
+}
+.banguela-enciclopedia img {
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -47%;
+    margin-left: -22%;
+}
+.banguela-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.narder-enciclopedia img {
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -47%;
+    margin-left: 5%;
+}
+.narder-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.ziper-enciclopedia img {
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -27%;
+    margin-left: 5%;
+}
+.ziper-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.pesadelo-enciclopedia img {
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -27%;
+    margin-left: -25%;
+}
+.pesadelo-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.titulo-filmes {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.DRAGAO {
+    color: rgba(255, 101, 101, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.filmes-htyd img {
+    width: 250px;
+    margin: 0 auto;
+}
+.text1 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.897);
+}
+.filmes-htyd p img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+.posters-filmes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas, ajuste para mais */ /* espaço entre as imagens */
+    justify-items: center;
+    margin: 10px 0;
+}
+
+.posters-filmes img {
+    width: 250px; /* ajuste o tamanho conforme necessário */
+    height: 400px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.posters-filmes img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.3);
+    cursor: pointer;
+}
+.posters-filmes p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 90px;
+    
+}
+.titulo-trailers {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+.video-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+.container-personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.titulo-personagens {
+    text-align: center;
+
+}
+.personagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas, ajuste para mais */
+    justify-items: center;
+    margin: 10px 0;
+    max-width: 300px;
+    gap: 90px;
+    align-items: center;
+}
+.personagens img {
+    width: 250px; /* ajuste o tamanho conforme necessário */
+    height: 180px;
+    transition: transform 0.3s;
+}
+
