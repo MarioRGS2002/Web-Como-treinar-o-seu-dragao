@@ -135,13 +135,20 @@
     background-color: rgb(255, 103, 103);
     margin-left: 1000px;
 }
-.botao-menu:hover {
-    background-color: rgba(255, 103, 103, 0.7);
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+a:hover {
     cursor: pointer;
+    background-color: rgba(255, 103, 103, 0.7);
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
-    
 }
+    
+
 
 .descubra p {
     color: rgba(255, 255, 255, 0.897);
@@ -497,7 +504,7 @@ a:hover
 }
 .personagens {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas, ajuste para mais */
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     margin: 10px 0;
     max-width: 300px;
@@ -505,8 +512,32 @@ a:hover
     align-items: center;
 }
 .personagens img {
-    width: 250px; /* ajuste o tamanho conforme necessário */
+    width: 250px; 
     height: 180px;
     transition: transform 0.3s;
+}
+
+.primeiro-filme img {
+    width: 600px; 
+    height: 400px;
+    margin-left: 550px;
+    border-radius: 20%;
+}
+.titulo-primeiro {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(88, 118, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.sobre-primeiro {
+    text-align: left;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.897);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 50px;
+    width: 1200px;
 }
 
