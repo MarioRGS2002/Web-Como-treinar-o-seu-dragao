@@ -6,6 +6,10 @@
     padding: 0;
     font-family: "Funnel Sans", sans-serif;
 }
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 #index {
 
@@ -58,19 +62,14 @@
 #cabecalho #logo {
     width: 70px;
 }
-#menu .submenu {
-    background-color: var(--cor-02);
-    display: none;
-    position: absolute;
-    z-index: 1;
 
-}
 #menu ul li a{
     text-decoration: none;
     color: var(--cor-04);
     display: block;
     padding: 20px 30px;
     transition: all 0.3s linear;
+    border-radius: 20px;
 
 
 }
@@ -87,8 +86,12 @@
 }
 .cara img {
     width: 700px;
-    margin-left: 30%;
     animation: flutuar 3s ease-in-out infinite;    
+}
+.cara {
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
 @keyframes flutuar {
     0% {
@@ -102,10 +105,10 @@
     }
 }
 .banguela img {
-    width: 350px;
+    width: 200px;
     position: absolute;
-    top: 86%;
-    left: 75%; 
+    top: 90%;
+    left: 80%;
     z-index: 1;
 }
 .container{
@@ -147,16 +150,18 @@ a:hover {
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
 }
+.descubra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     
-
-
 .descubra p {
     color: rgba(255, 255, 255, 0.897);
     font-size: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 20px;
-    margin-left: 450px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -169,11 +174,14 @@ a:hover {
 #blocos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 120px;
     width: 1200px;
-    margin-left: 300px;
+    margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .bloco1{
     background-color: black;
@@ -540,4 +548,69 @@ a:hover
     padding: 0 50px;
     width: 1200px;
 }
+.diretores {
+    text-align: center;
+    color: #ff5050;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    padding: 50px;
 
+}
+.diretores-container2 {
+    max-width: 400px;
+    padding: 25px;
+    
+}
+.diretores-container2:hover {
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: #00000071;
+}
+.texto-diretores {
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.diretores-container img {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+.nome-diretores {
+    text-align: center;
+    font-size: 20px;
+    color: #ff5050;;
+    font-family: cursive;
+}
+.diretores-container {
+    display: grid;
+    grid-template-columns: repeat(2fr, 2fr);
+    margin-top: 50px;
+}
+.diretores-container3 {
+    width: 400px;
+    padding: 25px;
+}
+.diretores-container3:hover {
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: #00000071;
+}
+.diretores-container1{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
